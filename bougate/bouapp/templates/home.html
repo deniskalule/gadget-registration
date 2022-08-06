@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock title %}
+{% block content %}
+<div class="title p-5">
+    <h2 class="text-center P-5">WELCOME TO USER DASHBOARD</h2>
+    <hr size="5px">
+</div>
+<div class="row text-center">
+    <div class="col-md-4 p-3">
+        <a href="{% url 'view_person'%}" style="color:#5D4037">
+            <button class="btn p-5" style="background-color: #A52A2A" ><h6 class="text-dark">count: {{person_count}}</h6><h4 class="text-white">Registered Persons </h4></button>
+        </a>
+    </div>
+    <div class="col-md-4 p-3">
+
+        <a href="{% url 'view_items'%}">
+            <button class="btn btn-warning p-5"><h6 class="text-dark">count: {{items_count}}</h6><h4 class="text-white">Registered Items</h4></button>
+        </a>
+    </div>
+    <div class="col-md-4 p-3 ">
+        <a href="{% url 'view_badge'%}">
+            <button class="btn btn-danger p-5"><h6 class="text-dark">count: {{badge_count}}</h6><h4>Badged in Items</h4></button>
+        </a>
+    </div>
+</div>
+{% endblock content %}
